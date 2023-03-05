@@ -19,7 +19,7 @@ var userSchema = new mongoose.Schema({
     password:{type:'string',required:true},
     createdAt:{type:Date,default:Date.now()}
 })
-
+mongoose.set("strictQuery", true);
 let usersModel = mongoose.model('users',userSchema);
 
 module.exports={mongoose,usersModel}
